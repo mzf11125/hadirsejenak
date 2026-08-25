@@ -1,15 +1,17 @@
 import SectionHead from "../components/SectionHead.tsx";
 import ReportCard from "../components/ReportCard.tsx";
-import Button from "../components/Button.tsx";
+import usePageMeta from "../hooks/usePageMeta.ts";
 import { site } from "../data/site.ts";
 
-export default function LatestReports() {
+export default function ReportsPage() {
+  usePageMeta("Laporan, Hadir Sejenak", "Laporan kegiatan relawan Hadir Sejenak di Tigaraksa.");
+
   return (
-    <section className="site-section band" aria-labelledby="laporan-terakhir">
+    <section className="site-section">
       <div className="wrap">
         <SectionHead
-          num="04"
-          title="Laporan terakhir"
+          num="01"
+          title="Laporan"
           note="Setiap kunjungan ditutup dengan laporan terbuka. Terbit tiga hari kerja setelah acara."
         />
         <div className="grid g2">
@@ -17,11 +19,10 @@ export default function LatestReports() {
             <ReportCard key={r.slug} report={r} />
           ))}
         </div>
-        <div className="btn-row" style={{ marginTop: "var(--s5)" }}>
-          <Button to="/laporan" kind="secondary">
-            Lihat semua laporan
-          </Button>
-        </div>
+        <p className="bodysm" style={{ marginTop: "var(--s5)", color: "var(--tinta-2)" }}>
+          Laporan bersifat permanen di URL stabil dan tidak dihapus, hanya dikoreksi dengan
+          catatan koreksi yang terlihat.
+        </p>
       </div>
     </section>
   );

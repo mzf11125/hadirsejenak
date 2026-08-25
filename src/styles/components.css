@@ -506,6 +506,9 @@
 .site-nav .nav-links a:hover {
   color: var(--kapur);
 }
+.site-nav .nav-links a.is-active {
+  color: var(--sore);
+}
 /* Donasi is the only marigold element in the header */
 .site-nav .btn-primary {
   flex: none;

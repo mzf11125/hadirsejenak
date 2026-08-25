@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "../data/site.ts";
 
 export default function SiteFooter() {
@@ -9,7 +10,7 @@ export default function SiteFooter() {
         <div className="foot-grid">
           <div>
             <p style={{ color: "var(--papan-ink)", fontSize: 15, maxWidth: "48ch" }}>
-              {site.org.thesis}
+              {site.org.mission}
             </p>
             <p style={{ color: "var(--papan-ink-2)", fontSize: 13.5, margin: 0 }}>
               Kehadiran dihitung dalam jam, bukan hanya rupiah.
@@ -20,11 +21,11 @@ export default function SiteFooter() {
             <ul className="foot-links">
               {site.nav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
               <li>
-                <a href="/donasi">Donasi</a>
+                <Link to="/donasi">Donasi</Link>
               </li>
             </ul>
           </nav>
@@ -49,20 +50,23 @@ export default function SiteFooter() {
         </div>
         <div className="legal">
           <div>
-            <b>{site.org.legal.entity}</b>, {site.org.legal.deed}, {site.org.legal.address}.
+            <b>{site.org.legal.entity}</b>, {site.org.legal.deed},{" "}
+            {site.org.legal.address}.
           </div>
           <div style={{ marginTop: 8 }}>
-            <a
-              href="/kebijakan-privasi"
+            <Link
+              to="/kebijakan-privasi"
               style={{ color: "var(--papan-ink-2)", marginRight: 16 }}
             >
               Kebijakan privasi
-            </a>
-            <a href="/perlindungan-anak" style={{ color: "var(--papan-ink-2)" }}>
+            </Link>
+            <Link to="/perlindungan-anak" style={{ color: "var(--papan-ink-2)" }}>
               Perlindungan anak
-            </a>
+            </Link>
           </div>
-          <div style={{ marginTop: 8 }}>© {year} Hadir Sejenak. Made with care in Bintaro.</div>
+          <div style={{ marginTop: 8 }}>
+            © {year} Hadir Sejenak. Dibuat dengan hati di Tigaraksa, Kabupaten Tangerang.
+          </div>
         </div>
       </div>
     </footer>

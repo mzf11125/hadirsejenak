@@ -21,7 +21,7 @@ export default function About() {
             </p>
             <p style={{ maxWidth: "56ch", color: "var(--tinta-2)" }}>
               Kami komunitas, bukan platform. Relawan kami datang dari
-              Jabodetabek, dan setiap kunjungan yang kami buat terdokumentasi
+              Kabupaten Tangerang dan sekitarnya, dan setiap kunjungan yang kami buat terdokumentasi
               jam per jamnya.
             </p>
           </div>
@@ -36,10 +36,10 @@ export default function About() {
               {site.org.legal.permitNote}
             </p>
             <div className="btn-row" style={{ marginTop: "var(--s4)" }}>
-              <Button as="a" href="/tentang" kind="secondary">
+              <Button to="/tentang" kind="secondary">
                 Baca selengkapnya
               </Button>
-              <Button as="a" href={site.org.instagramUrl} kind="quiet" target="_blank" rel="noreferrer">
+              <Button href={site.org.instagramUrl} kind="quiet" target="_blank" rel="noreferrer">
                 {site.org.instagram}
               </Button>
             </div>

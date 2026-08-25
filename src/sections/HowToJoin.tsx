@@ -24,8 +24,7 @@ export default function HowToJoin() {
                 {item.body}
               </p>
               <Button
-                as="a"
-                href={item.cta.href}
+                to={item.cta.href}
                 kind={item.cta.kind}
               >
                 {item.cta.label}

@@ -8,14 +8,15 @@ export default function PresenceStats() {
     <section className="site-section band" aria-labelledby="angka-kehadiran">
       <div className="wrap">
         <SectionHead
-          num="02"
-          title="Angka kehadiran"
+          num="01"
+          title="Dampak kami"
           note="Kehadiran dihitung dulu. Rupiah menyusul di bawah, dalam ukuran badan teks, bukan angka pahlawan."
         />
-        <div className="grid g3">
+        <div className="grid g4">
           <Stat value={s.volunteers} label={s.volunteersLabel} />
           <Stat value={s.hours} label={s.hoursLabel} />
           <Stat value={s.panti} label={s.pantiLabel} />
+          <Stat value={s.children} label={s.childrenLabel} />
         </div>
         <p
           className="bodysm"

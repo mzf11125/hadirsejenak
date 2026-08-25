@@ -8,7 +8,7 @@ type JamKunjunganProps = {
   preview?: boolean;
   previewCount?: number;
   revealRef?: Ref<HTMLDivElement>;
-  detailHref?: string;
+  detailTo?: string;
 };
 
 /**
@@ -22,7 +22,7 @@ export default function JamKunjungan({
   preview = false,
   previewCount = 3,
   revealRef,
-  detailHref = "#",
+  detailTo = "/events",
 }: JamKunjunganProps) {
   const shown = preview ? entries.slice(0, previewCount) : entries;
 
@@ -43,8 +43,8 @@ export default function JamKunjungan({
       </ol>
       {preview && (
         <div className="jam-preview-tag">
-          <span>Jam kunjungan lengkap di halaman kegiatan.</span>
-          <Button as="a" href={detailHref} kind="secondary" onDark>
+          <span>Jam kunjungan lengkap di halaman events.</span>
+          <Button to={detailTo} kind="secondary" onDark>
             Lihat kegiatan
           </Button>
         </div>

@@ -29,7 +29,7 @@ export default function ReportCard({ report }: { report: Report }) {
         </span>
       </div>
       <div className="report-cta">
-        <Button as="a" href={`/laporan/${report.slug}`} kind="quiet">
+        <Button to={`/laporan/${report.slug}`} kind="quiet">
           Baca laporan
         </Button>
       </div>
