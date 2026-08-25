@@ -1,0 +1,135 @@
+@import "./tokens.css";
+@import "./components.css";
+
+/* ---------------------------------- reset / base ---------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--kapur);
+  color: var(--tinta);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 var(--s4);
+}
+
+a {
+  color: var(--seragam);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--seragam) 85%, #000);
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+::selection {
+  background: var(--sore);
+  color: var(--papan-deep);
+}
+
+:focus-visible {
+  outline: 3px solid var(--seragam);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+/* ---------------------------------- layout primitives ---------------------------------- */
+.wrap {
+  max-width: var(--wrap-max);
+  margin: 0 auto;
+  padding: 0 var(--s5);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--s4);
+  top: -100%;
+  z-index: 100;
+  padding: var(--s3) var(--s4);
+  background: var(--sore);
+  color: var(--papan-deep);
+  font-weight: 700;
+  border-radius: var(--r-sm);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--s4);
+  color: var(--papan-deep);
+}
+
+/* utility labels + captions */
+.label {
+  font-family: var(--font-util);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tinta-2);
+}
+
+.mono {
+  font-family: var(--font-util);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.l-constrain {
+  max-width: 62ch;
+}
+
+.bodysm {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--tinta-2);
+}
+
+/* disable motion wholesale for users who ask for it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

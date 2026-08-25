@@ -1,0 +1,50 @@
+:root {
+  /* --- Core palette — pulled from an Indonesian school afternoon --- */
+  --papan: #16332b; /* chalkboard green, dark bands */
+  --papan-deep: #0d211b; /* footer, overlays */
+  --papan-soft: #1e4036; /* raised dark surface (card on dark) */
+  --sore: #f4a62a; /* late-afternoon marigold, primary action */
+  --sore-tekan: #d98c13; /* pressed / hover state */
+  --seragam: #2c5fa8; /* uniform blue, links and info */
+  --kapur: #faf9f6; /* page paper */
+  --kapur-2: #f0ede4; /* alternating band, card fill */
+  --tinta: #14201c; /* body text */
+  --tinta-2: #5c6b65; /* secondary text */
+  --garis: #ddd9ce; /* hairlines and borders */
+  --hati: #c8442f; /* urgent only, never decorative */
+  --hijau-ya: #2e9e6b; /* do / yes accent */
+
+  /* On-dark text tones */
+  --papan-ink: #c8d4ce;
+  --papan-ink-2: #9fb0a9;
+
+  /* --- Typography --- */
+  --font-display: "Bricolage Grotesque", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-util: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* --- Space scale (4pt base) --- */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --s9: 96px;
+
+  /* --- Radius --- */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* --- Elevation --- */
+  --lift-1: 0 1px 2px rgba(20, 32, 28, 0.06), 0 2px 8px rgba(20, 32, 28, 0.05);
+  --lift-2: 0 6px 24px rgba(20, 32, 28, 0.1);
+
+  /* --- Layout --- */
+  --wrap-max: 1040px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
