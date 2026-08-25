@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout.tsx";
 import Home from "./pages/Home.tsx";
 import EventsPage from "./pages/EventsPage.tsx";
@@ -13,6 +13,13 @@ import ContactPage from "./pages/ContactPage.tsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
 import ChildSafeguardingPage from "./pages/ChildSafeguardingPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+import { useParams } from "react-router-dom";
+
+function LegacyEventRedirect({ daftar = false }: { daftar?: boolean }) {
+  const { slug } = useParams();
+  const target = daftar ? `/events/${slug}/daftar` : `/events/${slug}`;
+  return <Navigate to={target} replace />;
+}
 
 export default function App() {
   return (
@@ -31,6 +38,12 @@ export default function App() {
           <Route path="/kontak" element={<ContactPage />} />
           <Route path="/kebijakan-privasi" element={<PrivacyPolicyPage />} />
           <Route path="/perlindungan-anak" element={<ChildSafeguardingPage />} />
+
+          {/* Legacy /kegiatan routes redirect to the canonical /events paths */}
+          <Route path="/kegiatan" element={<Navigate to="/events" replace />} />
+          <Route path="/kegiatan/:slug" element={<LegacyEventRedirect />} />
+          <Route path="/kegiatan/:slug/daftar" element={<LegacyEventRedirect daftar />} />
+
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
