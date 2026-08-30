@@ -7,7 +7,13 @@ export default function SiteHeader() {
     <div className="site-nav" role="banner">
       <div className="nav-inner">
         <Link className="brand" to="/" aria-label={`${site.org.name}, beranda`}>
-          <span className="brand-mark" aria-hidden="true" />
+          <img
+            className="brand-mark"
+            src="/logo-mark.png"
+            alt=""
+            width={26}
+            height={26}
+          />
           {site.org.name}
         </Link>
         <nav aria-label="Navigasi utama">

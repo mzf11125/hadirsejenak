@@ -60,24 +60,19 @@ export default function AboutPage() {
               className="card"
               style={{ display: "grid", placeItems: "center", textAlign: "center", alignSelf: "start" }}
             >
-              <div
+              <img
+                src="/maificantik.jpeg"
+                alt={f.name}
+                width={120}
+                height={120}
                 style={{
                   width: 120,
                   height: 120,
                   borderRadius: "50%",
-                  display: "grid",
-                  placeItems: "center",
-                  background: "var(--seragam)",
-                  color: "var(--kapur)",
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 800,
-                  fontSize: 40,
+                  objectFit: "cover",
                   marginBottom: "var(--s4)",
                 }}
-                aria-hidden="true"
-              >
-                M
-              </div>
+              />
               <b style={{ fontSize: 17 }}>{f.name}</b>
               <span className="bodysm" style={{ marginTop: 4 }}>
                 {f.role}

@@ -480,9 +480,8 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--sore);
+  object-fit: cover;
   flex: none;
-  box-shadow: inset 0 0 0 3px var(--papan);
 }
 .site-nav nav {
   margin-left: auto;
