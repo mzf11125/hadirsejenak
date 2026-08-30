@@ -11,8 +11,8 @@ export default function SiteHeader() {
             className="brand-mark"
             src="/logo-mark.png"
             alt=""
-            width={26}
-            height={26}
+            width={78}
+            height={78}
           />
           {site.org.name}
         </Link>
