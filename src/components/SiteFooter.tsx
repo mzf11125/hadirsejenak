@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { site } from "../data/site.ts";
 
 export default function SiteFooter() {
-  const year = new Date().getFullYear();
   return (
     <footer className="site-footer">
       <div className="wrap">
@@ -10,23 +9,20 @@ export default function SiteFooter() {
         <div className="foot-grid">
           <div>
             <p style={{ color: "var(--papan-ink)", fontSize: 15, maxWidth: "48ch" }}>
-              {site.org.mission}
+              {site.footer.tagline}
             </p>
             <p style={{ color: "var(--papan-ink-2)", fontSize: 13.5, margin: 0 }}>
-              Kehadiran dihitung dalam jam, bukan hanya rupiah.
+              {site.footer.description}
             </p>
           </div>
           <nav aria-label="Navigasi footer">
             <h4>Jelajahi</h4>
             <ul className="foot-links">
-              {site.nav.map((item) => (
+              {site.footerNav.map((item) => (
                 <li key={item.href}>
                   <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
-              <li>
-                <Link to="/donasi">Donasi</Link>
-              </li>
             </ul>
           </nav>
           <div>
@@ -34,25 +30,27 @@ export default function SiteFooter() {
             <ul className="foot-links">
               <li>
                 <a href={site.org.instagramUrl} rel="noreferrer" target="_blank">
-                  Instagram {site.org.instagram}
+                  {site.footer.instagramLine}
                 </a>
               </li>
               <li>
                 <a href={site.org.whatsappUrl} rel="noreferrer" target="_blank">
-                  WhatsApp
+                  WhatsApp {site.org.whatsappDisplay}
                 </a>
               </li>
               <li>
                 <a href={`mailto:${site.org.email}`}>{site.org.email}</a>
               </li>
+              <li>
+                <a href={site.org.websiteUrl} rel="noreferrer" target="_blank">
+                  {site.org.websiteDisplay}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div className="legal">
-          <div>
-            <b>{site.org.legal.entity}</b>, {site.org.legal.deed},{" "}
-            {site.org.legal.address}.
-          </div>
+          <div>{site.footer.foundedLine}</div>
           <div style={{ marginTop: 8 }}>
             <Link
               to="/kebijakan-privasi"
@@ -64,9 +62,7 @@ export default function SiteFooter() {
               Perlindungan anak
             </Link>
           </div>
-          <div style={{ marginTop: 8 }}>
-            © {year} Hadir Sejenak. Dibuat dengan hati di Tigaraksa, Kabupaten Tangerang.
-          </div>
+          <div style={{ marginTop: 8 }}>{site.footer.copyright}</div>
         </div>
       </div>
     </footer>

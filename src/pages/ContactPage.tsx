@@ -5,16 +5,17 @@ import Button from "../components/Button.tsx";
 import usePageMeta from "../hooks/usePageMeta.ts";
 import { site } from "../data/site.ts";
 
-type Topic = "umum" | "kerjasama" | "panti";
+type Topic = "umum" | "volunteer" | "kolaborasi" | "program";
 
 const TOPICS: { id: Topic; label: string }[] = [
   { id: "umum", label: "Pertanyaan umum" },
-  { id: "kerjasama", label: "Kerja sama dan sponsor" },
-  { id: "panti", label: "Saya pengurus panti / yayasan" },
+  { id: "volunteer", label: "Ingin menjadi volunteer" },
+  { id: "kolaborasi", label: "Ingin berkolaborasi" },
+  { id: "program", label: "Ingin mendukung program" },
 ];
 
 export default function ContactPage() {
-  usePageMeta("Kontak, Hadir Sejenak", site.contact.intro);
+  usePageMeta(`Kontak, ${site.org.name}`, site.contact.intro);
 
   const [nama, setNama] = useState("");
   const [topik, setTopik] = useState<Topic>("umum");
@@ -46,41 +47,25 @@ export default function ContactPage() {
 
   return (
     <section className="site-section">
-      <div className="wrap" style={{ maxWidth: 640 }}>
-        <SectionHead num="01" title={site.contact.heading} note={site.contact.intro} />
+      <div className="wrap" style={{ maxWidth: 720 }}>
+        <SectionHead num="23" title={site.contact.heading} note={site.contact.note} />
 
-        <div className="grid g2" style={{ marginBottom: "var(--s6)" }}>
-          <div className="card">
-            <span className="label">WhatsApp</span>
-            <p className="bodysm" style={{ marginTop: 8 }}>
-              <a href={site.org.whatsappUrl} rel="noreferrer" target="_blank">
-                Chat kami di WhatsApp
-              </a>
-            </p>
-          </div>
-          <div className="card">
-            <span className="label">Email</span>
-            <p className="bodysm" style={{ marginTop: 8 }}>
-              <a href={`mailto:${site.org.email}`}>{site.org.email}</a>
-            </p>
-          </div>
-          <div className="card">
-            <span className="label">Instagram</span>
-            <p className="bodysm" style={{ marginTop: 8 }}>
-              <a href={site.org.instagramUrl} rel="noreferrer" target="_blank">
-                {site.org.instagram}
-              </a>
-            </p>
-          </div>
-          <div className="card">
-            <span className="label">Kerja sama dan sponsor</span>
-            <p className="bodysm" style={{ marginTop: 8, color: "var(--tinta-2)" }}>
-              Pertanyaan kerja sama dirutekan ke inbox terpisah dari kontak umum.
-            </p>
-          </div>
+        <p style={{ maxWidth: "56ch", fontSize: 17 }}>{site.contact.intro}</p>
+
+        <div className="grid g2" style={{ marginTop: "var(--s6)" }}>
+          {site.contact.channels.map((c) => (
+            <div className="card" key={c.label}>
+              <span className="label">{c.label}</span>
+              <p className="bodysm" style={{ marginTop: 8, marginBottom: 0 }}>
+                <a href={c.href} rel="noreferrer" target={c.href.startsWith("mailto") ? undefined : "_blank"}>
+                  {c.value}
+                </a>
+              </p>
+            </div>
+          ))}
         </div>
 
-        <form className="card" onSubmit={handleSubmit} noValidate>
+        <form className="card" onSubmit={handleSubmit} noValidate style={{ marginTop: "var(--s6)" }}>
           <span className="label">Formulir kontak</span>
 
           <div className="field" style={{ marginTop: "var(--s4)", marginBottom: "var(--s4)" }}>
@@ -151,12 +136,6 @@ export default function ContactPage() {
             </Button>
           </div>
         </form>
-
-        <div className="btn-row" style={{ marginTop: "var(--s5)" }}>
-          <Button to="/tentang" kind="quiet">
-            Tentang kami
-          </Button>
-        </div>
       </div>
     </section>
   );

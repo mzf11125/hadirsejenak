@@ -1,5 +1,5 @@
 /* ============================================================
-   Components — ported from Hadir Sejenak Style Guideline v0.1
+   Components , ported from Hadir Sejenak Style Guideline v0.1
    ============================================================ */
 
 /* ---------------------------- buttons ---------------------------- */
@@ -274,7 +274,7 @@
   color: var(--papan-ink);
 }
 
-/* scroll reveal target — set by JS */
+/* scroll reveal target , set by JS */
 .reveal {
   opacity: 0;
   transform: translateY(24px);

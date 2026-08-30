@@ -1,24 +1,24 @@
-import Hero from "../sections/Hero.tsx";
-import PresenceStats from "../sections/PresenceStats.tsx";
-import HowToJoin from "../sections/HowToJoin.tsx";
-import LatestReports from "../sections/LatestReports.tsx";
-import About from "../sections/About.tsx";
+import HomeHero from "../sections/HomeHero.tsx";
+import WhatIs from "../sections/WhatIs.tsx";
+import ImpactStrip from "../sections/ImpactStrip.tsx";
+import WhyWeExist from "../sections/WhyWeExist.tsx";
+import CtaBand from "../sections/CtaBand.tsx";
 import usePageMeta from "../hooks/usePageMeta.ts";
 import { site } from "../data/site.ts";
 
 export default function Home() {
   usePageMeta(
-    `${site.org.name}, Komunitas Relawan di Tigaraksa`,
-    site.org.mission
+    `${site.org.name}, Official Website`,
+    `${site.org.tagline} ${site.org.description}`
   );
 
   return (
     <>
-      <Hero />
-      <PresenceStats />
-      <HowToJoin />
-      <LatestReports />
-      <About />
+      <HomeHero />
+      <WhatIs />
+      <ImpactStrip />
+      <WhyWeExist />
+      <CtaBand />
     </>
   );
 }
