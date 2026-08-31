@@ -85,15 +85,6 @@ export default function ContactPage() {
               id="topik"
               value={topik}
               onChange={(e) => setTopik(e.target.value as Topic)}
-              style={{
-                width: "100%",
-                padding: "12px 14px",
-                borderRadius: "var(--r-sm)",
-                border: "1.5px solid var(--garis)",
-                fontFamily: "var(--font-body)",
-                fontSize: 16,
-                background: "#fff",
-              }}
             >
               {TOPICS.map((t) => (
                 <option key={t.id} value={t.id}>
@@ -110,14 +101,6 @@ export default function ContactPage() {
               rows={4}
               value={pesan}
               onChange={(e) => setPesan(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "12px 14px",
-                borderRadius: "var(--r-sm)",
-                border: "1.5px solid var(--garis)",
-                fontFamily: "var(--font-body)",
-                fontSize: 16,
-              }}
             />
           </div>
 

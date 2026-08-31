@@ -210,6 +210,51 @@
   }
 }
 
+/* ---------------------------- forms ---------------------------- */
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--tinta);
+  margin-bottom: var(--s2);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--garis);
+  background: #fff;
+  color: var(--tinta);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--seragam);
+  box-shadow: 0 0 0 3px rgba(44, 95, 168, 0.16);
+}
+.field input[aria-invalid="true"] {
+  border-color: var(--hati);
+}
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.err {
+  color: var(--hati);
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(200, 68, 47, 0.08);
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+}
+
 /* ---------------------------- card ---------------------------- */
 .card {
   background: #fff;
