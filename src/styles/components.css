@@ -180,6 +180,36 @@
   }
 }
 
+/* ---------------------------- photo gallery ---------------------------- */
+.gallery-masonry {
+  columns: 3;
+  column-gap: var(--s4);
+  margin-top: var(--s6);
+}
+.gallery-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: var(--s4);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--garis);
+  break-inside: avoid;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.gallery-masonry img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lift-2);
+}
+@media (max-width: 900px) {
+  .gallery-masonry {
+    columns: 2;
+  }
+}
+@media (max-width: 560px) {
+  .gallery-masonry {
+    columns: 1;
+  }
+}
+
 /* ---------------------------- card ---------------------------- */
 .card {
   background: #fff;

@@ -2,6 +2,7 @@ import HomeHero from "../sections/HomeHero.tsx";
 import WhatIs from "../sections/WhatIs.tsx";
 import ImpactStrip from "../sections/ImpactStrip.tsx";
 import WhyWeExist from "../sections/WhyWeExist.tsx";
+import PhotoGallery from "../sections/PhotoGallery.tsx";
 import CtaBand from "../sections/CtaBand.tsx";
 import usePageMeta from "../hooks/usePageMeta.ts";
 import { site } from "../data/site.ts";
@@ -18,6 +19,7 @@ export default function Home() {
       <WhatIs />
       <ImpactStrip />
       <WhyWeExist />
+      <PhotoGallery />
       <CtaBand />
     </>
   );

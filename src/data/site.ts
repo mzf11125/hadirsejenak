@@ -681,3 +681,12 @@ export const site = {
     ],
   },
 };
+
+export const gallery = {
+  heading: "OUR ACTIVITIES",
+  note: "Dokumentasi Kegiatan",
+  images: Array.from({ length: 13 }, (_, i) => ({
+    src: `/gallery-${String(i + 1).padStart(2, "0")}.jpg`,
+    alt: "Dokumentasi kegiatan Hadir Sejenak",
+  })),
+};
