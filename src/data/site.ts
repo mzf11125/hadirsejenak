@@ -96,10 +96,9 @@ export const site = {
     heading: "APA ITU HADIR SEJENAK?",
     note: "About Hadir Sejenak",
     story: [
-      "Hadir Sejenak adalah sebuah ruang sosial yang didirikan untuk menjadi wadah bagi individu untuk menghadirkan kepedulian dalam bentuk yang nyata.",
-      "Hadir Sejenak membuka ruang bagi siapa pun untuk berkontribusi melalui waktu, tenaga, perhatian, kemampuan, maupun sumber daya yang dimiliki.",
-      "Kami percaya bahwa kebermanfaatan tidak memiliki satu bentuk. Ia dapat hadir melalui kegiatan sosial, volunteer, edukasi, interaksi, kreativitas, kampanye, kolaborasi, maupun tindakan sederhana yang dilakukan dengan tulus.",
-      "Hadir Sejenak hadir untuk mempertemukan orang orang yang memiliki satu keinginan yang sama: untuk memberikan arti bagi sesama.",
+      "Hadir Sejenak adalah sebuah ruang sosial yang didirikan untuk menjadi wadah bagi individu untuk menghadirkan kepedulian dalam bentuk yang nyata. Hadir Sejenak hadir untuk mempertemukan orang orang yang memiliki satu keinginan yang sama, untuk memberikan arti bagi sesama.",
+      "Hadir Sejenak didirikan oleh Maifi pada Mei 2026. Mulai dari merumuskan ide, membangun identitas, menentukan arah, menyusun konsep kegiatan, mengelola berbagai kebutuhan, membangun komunikasi dan kolaborasi, hingga menjalankan kegiatan, semuanya menjadi bagian dari proses awal membangun Hadir Sejenak.",
+      "Namun, Hadir Sejenak sejak awal tidak dimaksudkan untuk menjadi perjalanan seorang diri. Apa yang dimulai oleh satu orang diharapkan dapat tumbuh menjadi ruang yang dapat diisi, dikembangkan, dan dijalankan bersama oleh banyak orang.",
     ],
   },
 
@@ -133,9 +132,7 @@ export const site = {
       heading: "OUR BEGINNING",
       note: "The Beginning of Hadir Sejenak",
       story: [
-        "Hadir Sejenak didirikan oleh Maifi pada Mei 2026.",
-        "Hadir Sejenak berawal dari sebuah gagasan sederhana untuk menciptakan ruang bagi siapa pun, terutama bagi anak anak muda, yang memungkinkan lebih banyak orang melakukan sesuatu yang berarti bagi sesama. Pada tahap awal, Maifi menjadi orang yang menggagas, membangun, dan menjalankan Hadir Sejenak secara langsung.",
-        "Mulai dari merumuskan ide, membangun identitas, menentukan arah, menyusun konsep kegiatan, mengelola berbagai kebutuhan, membangun komunikasi dan kolaborasi, hingga menjalankan kegiatan, semuanya menjadi bagian dari proses awal membangun Hadir Sejenak.",
+        "Hadir Sejenak didirikan oleh Maifi pada Mei 2026. Mulai dari merumuskan ide, membangun identitas, menentukan arah, menyusun konsep kegiatan, mengelola berbagai kebutuhan, membangun komunikasi dan kolaborasi, hingga menjalankan kegiatan, semuanya menjadi bagian dari proses awal membangun Hadir Sejenak.",
         "Namun, Hadir Sejenak sejak awal tidak dimaksudkan untuk menjadi perjalanan seorang diri. Apa yang dimulai oleh satu orang diharapkan dapat tumbuh menjadi ruang yang dapat diisi, dikembangkan, dan dijalankan bersama oleh banyak orang.",
       ],
       closing: "Started by one. Built for many.",
@@ -685,7 +682,7 @@ export const site = {
 export const gallery = {
   heading: "OUR ACTIVITIES",
   note: "Dokumentasi Kegiatan",
-  images: Array.from({ length: 13 }, (_, i) => ({
+  images: Array.from({ length: 15 }, (_, i) => ({
     src: `/gallery-${String(i + 1).padStart(2, "0")}.jpg`,
     alt: "Dokumentasi kegiatan Hadir Sejenak",
   })),
