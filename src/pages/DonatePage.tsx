@@ -32,6 +32,31 @@ export default function DonatePage() {
           ))}
         </div>
 
+        <span className="label" style={{ display: "block", margin: "var(--s6) 0 var(--s4)" }}>
+          Payment QR
+        </span>
+        <div className="card" style={{ textAlign: "center" }}>
+          <div
+            style={{
+              background: "#fff",
+              display: "inline-block",
+              padding: "var(--s4)",
+              borderRadius: "var(--r-lg)",
+            }}
+          >
+            <img
+              src={site.donation.qrImage}
+              alt="QR code donasi Hadir Sejenak"
+              width={220}
+              height={220}
+              style={{ display: "block", width: 220, height: 220 }}
+            />
+          </div>
+          <p className="bodysm" style={{ marginTop: "var(--s4)", marginBottom: 0, color: "var(--tinta-2)" }}>
+            {site.donation.qrCaption}
+          </p>
+        </div>
+
         <div
           className="card"
           style={{ marginTop: "var(--s6)", background: "var(--kapur-2)", borderColor: "var(--garis)" }}

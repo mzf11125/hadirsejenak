@@ -398,6 +398,9 @@ export const site = {
     ],
     important:
       "Informasi rekening dan kanal donasi resmi hanya akan dicantumkan melalui media resmi Hadir Sejenak.",
+    qrImage: "/qr-donasi.png",
+    qrCaption:
+      "Pindai kode QR di atas menggunakan aplikasi mobile banking atau e-wallet untuk berdonasi.",
   },
 
   /* 14 COLLABORATION */
