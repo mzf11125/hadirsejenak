@@ -255,6 +255,41 @@
   padding: 10px 14px;
 }
 
+/* ---------------------------- founder ---------------------------- */
+.founder-grid {
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  align-items: start;
+  gap: var(--s6, 48px);
+}
+.founder-photo {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--garis);
+  border-radius: var(--r-lg);
+  box-shadow: var(--lift-2);
+  overflow: hidden;
+}
+.founder-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.founder-photo figcaption {
+  display: grid;
+  gap: 4px;
+  padding: var(--s4);
+}
+@media (max-width: 760px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+  .founder-photo {
+    max-width: 420px;
+  }
+}
+
 /* ---------------------------- card ---------------------------- */
 .card {
   background: #fff;

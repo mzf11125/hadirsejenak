@@ -41,7 +41,21 @@ export default function AboutPage() {
       <section className="site-section band">
         <div className="wrap">
           <SectionHead num="04" title={f.heading} note={f.note} />
-          <div className="grid g2" style={{ alignItems: "start" }}>
+          <div className="grid founder-grid">
+            <figure className="founder-photo">
+              <img
+                src="/founder.jpg"
+                alt={`${f.name}, ${f.role}`}
+                width={900}
+                height={1200}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <b style={{ fontSize: 17 }}>{f.name}</b>
+                <span className="bodysm">{f.role}</span>
+              </figcaption>
+            </figure>
             <div>
               <h3 style={{ fontSize: 30, marginBottom: 4 }}>{f.name}</h3>
               <p className="bodysm" style={{ marginBottom: "var(--s4)" }}>
@@ -55,28 +69,6 @@ export default function AboutPage() {
               <p className="mono" style={{ color: "var(--sore-tekan)" }}>
                 {f.closing}
               </p>
-            </div>
-            <div
-              className="card"
-              style={{ display: "grid", placeItems: "center", textAlign: "center", alignSelf: "start" }}
-            >
-              <img
-                src="/maificantik.jpeg"
-                alt={f.name}
-                width={120}
-                height={120}
-                style={{
-                  width: 120,
-                  height: 120,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  marginBottom: "var(--s4)",
-                }}
-              />
-              <b style={{ fontSize: 17 }}>{f.name}</b>
-              <span className="bodysm" style={{ marginTop: 4 }}>
-                {f.role}
-              </span>
             </div>
           </div>
         </div>
