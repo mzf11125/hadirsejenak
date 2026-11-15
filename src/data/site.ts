@@ -58,8 +58,6 @@ export const site = {
     email: "maifisocialproject@gmail.com",
     whatsappDisplay: "+62 812 8273 0367",
     whatsappUrl: whatsappBase,
-    websiteUrl: "https://hadirsejenak.vercel.app",
-    websiteDisplay: "hadirsejenak.vercel.app",
   },
 
   /** Prefilled WhatsApp links used by volunteer / collaboration CTAs. */

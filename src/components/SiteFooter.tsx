@@ -41,11 +41,6 @@ export default function SiteFooter() {
               <li>
                 <a href={`mailto:${site.org.email}`}>{site.org.email}</a>
               </li>
-              <li>
-                <a href={site.org.websiteUrl} rel="noreferrer" target="_blank">
-                  {site.org.websiteDisplay}
-                </a>
-              </li>
             </ul>
           </div>
         </div>
