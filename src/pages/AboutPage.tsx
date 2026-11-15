@@ -46,8 +46,8 @@ export default function AboutPage() {
               <img
                 src="/founder.jpg"
                 alt={`${f.name}, ${f.role}`}
-                width={900}
-                height={810}
+                width={753}
+                height={814}
                 loading="lazy"
                 decoding="async"
               />
