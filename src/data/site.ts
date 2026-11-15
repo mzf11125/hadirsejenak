@@ -119,9 +119,9 @@ export const site = {
   /* Home teaser strip */
   impactTeaser: {
     stats: [
-      { value: "65", label: "total volunteer" },
-      { value: "110", label: "anak / penerima manfaat" },
-      { value: "Rp 5.058.000", label: "total donasi" },
+      { value: "104", label: "total volunteer" },
+      { value: "162", label: "anak / penerima manfaat" },
+      { value: "Rp 15.604.342", label: "total donasi" },
     ],
     cta: { label: "Lihat perjalanan kami", href: "/perjalanan", kind: "secondary" } satisfies Cta,
   },
@@ -440,7 +440,7 @@ export const site = {
     heading: "OUR JOURNEY",
     note: "May until now",
     intro:
-      "Empat bulan pertama menjadi bagian penting dari perjalanan Hadir Sejenak. Dimulai pada Mei 2026 sebagai sebuah inisiatif yang dibangun oleh Maifi, Hadir Sejenak perlahan berkembang melalui keterlibatan lebih banyak orang dan dukungan dari berbagai pihak.",
+      "Tujuh bulan pertama menjadi bagian penting dari perjalanan Hadir Sejenak. Dimulai pada Mei 2026 sebagai sebuah inisiatif yang dibangun oleh Maifi, Hadir Sejenak perlahan berkembang melalui keterlibatan lebih banyak orang dan dukungan dari berbagai pihak.",
     months: [
       {
         month: "MAY 2026",
@@ -493,16 +493,55 @@ export const site = {
           { category: "Donation", total: "Rp 2.363.000" },
         ],
       },
+      {
+        month: "SEPTEMBER 2026",
+        title: "Keeping the Momentum",
+        story: [
+          "Memasuki September 2026, Hadir Sejenak terus berjalan bersama volunteer dan dukungan dari berbagai pihak.",
+          "Setiap kehadiran menjadi bagian dari perjalanan yang terus bertumbuh.",
+        ],
+        impact: [
+          { category: "Volunteer", total: "11" },
+          { category: "Children / Beneficiaries", total: "10" },
+          { category: "Donation", total: "Rp 4.535.000" },
+        ],
+      },
+      {
+        month: "OCTOBER 2026",
+        title: "Walking Further",
+        story: [
+          "Pada bulan Oktober, lebih banyak volunteer hadir dan lebih banyak anak merasakan manfaat dari kegiatan Hadir Sejenak.",
+          "Dukungan yang datang membuat perjalanan ini terus melangkah lebih jauh.",
+        ],
+        impact: [
+          { category: "Volunteer", total: "17" },
+          { category: "Children / Beneficiaries", total: "25" },
+          { category: "Donation", total: "Rp 2.083.000" },
+        ],
+      },
+      {
+        month: "NOVEMBER 2026",
+        title: "Still Present",
+        story: [
+          "November 2026 menjadi bulan ketujuh perjalanan Hadir Sejenak, dan prosesnya masih berlangsung.",
+          "Data donasi bulan ini akan diperbarui seiring berjalannya kegiatan.",
+        ],
+        impact: [
+          { category: "Volunteer", total: "18" },
+          { category: "Children / Beneficiaries", total: "17" },
+          { category: "Donation", total: "Dalam proses" },
+        ],
+      },
     ] satisfies JourneyMonth[],
 
     /* 16 TOTAL IMPACT */
     totalImpact: {
       heading: "TOTAL IMPACT",
-      note: "May to August 2026",
+      note: "May to November 2026",
       rows: [
-        { category: "Total Volunteer", total: "65" },
-        { category: "Total Children / Beneficiaries", total: "110" },
-        { category: "Total Donation", total: "Rp 5.058.000" },
+        { category: "Total Volunteer", total: "104" },
+        { category: "Total Children / Beneficiaries", total: "162" },
+        { category: "Total Donation", total: "Rp 15.604.342" },
       ],
     },
 
@@ -510,7 +549,7 @@ export const site = {
     noteBlock: {
       heading: "A NOTE FROM HADIR SEJENAK",
       body: [
-        "Empat bulan pertama mungkin baru menjadi awal. Namun, setiap angka di dalam perjalanan ini memiliki cerita.",
+        "Tujuh bulan pertama mungkin baru menjadi awal. Namun, setiap angka di dalam perjalanan ini memiliki cerita.",
         "Ada volunteer yang meluangkan waktunya. Ada donatur yang mempercayakan dukungannya. Ada orang orang yang memilih untuk hadir. Dan ada momen momen sederhana yang mungkin berlangsung hanya sementara, tetapi meninggalkan arti yang jauh lebih lama.",
         "Sejenak hadir, selamanya berarti.",
       ],
@@ -520,7 +559,7 @@ export const site = {
     continuing: {
       heading: "CONTINUING THE JOURNEY",
       body: [
-        "Perjalanan Hadir Sejenak tidak berhenti pada Agustus 2026. Data dan cerita akan terus diperbarui seiring bertambahnya kegiatan, volunteer, penerima manfaat, donatur, dan kolaborasi.",
+        "Perjalanan Hadir Sejenak tidak berhenti pada November 2026. Data dan cerita akan terus diperbarui seiring bertambahnya kegiatan, volunteer, penerima manfaat, donatur, dan kolaborasi.",
         "Mei 2026 menjadi titik awal. Bulan bulan berikutnya menjadi bagian dari perjalanan. Dan setiap orang yang hadir menjadi bagian dari cerita Hadir Sejenak.",
       ],
     },

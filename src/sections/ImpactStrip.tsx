@@ -7,7 +7,7 @@ export default function ImpactStrip() {
     <section className="site-section" aria-labelledby="dampak-sejauh-ini">
       <div className="wrap">
         <div className="label" style={{ marginBottom: "var(--s4)" }}>
-          Dampak, Mei hingga Agustus 2026
+          Dampak, Mei hingga November 2026
         </div>
         <div className="grid g3">
           {site.impactTeaser.stats.map((s) => (
